@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="sheet3">
+    <h1>CV FORM</h1>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label><br /><br />
+        <label for="phone">Enter a Phone Number:</label><br /><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          placeholder="555-55-555"
+          required
+        /><label> formate 555-55-555</label><br /><br />
+        <label for="linkedin">LinkedIn Page:</label>
+        <input
+          type="url"
+          id="linkedin"
+          name="linkedin"
+          placeholder="http://linkedin.com/
+yourprofile"
+        />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+      </fieldset>
+      <br /><br />
+      <label for="experience">Years of Experience (3 and 10):</label>
+      <input
+        type="number"
+        id="experience"
+        name="experience"
+        min="3"
+        max="10"
+        required
+      /><br /><br />
+
+      <label for="salary">Expected Salary:</label>
+      <label> 10000</label>
+      <input
+        type="range"
+        id="salary"
+        value="4000"
+        min="0"
+        max="10000"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output> 4000</output>
+
+      <br /><br />
+      <h7>Language:</h7>
+      <br /><br />
+      <label class="checkbox-label" for="arabic">
+        <input type="checkbox" id="arabic" name="language" value="Arabic" />
+        Arabic </label
+      ><br />
+      <label class="checkbox-label" for="english">
+        <input type="checkbox" id="english" name="language" value="English" />
+        English </label
+      ><br /><br />
+
+      <label for="cv">Upload Your CV:</label>
+      <input
+        type="file"
+        id="cv"
+        name="cv"
+        accept=".pdf, .doc, .docx"
+        required
+      /><br /><br />
+      <label for="start-week">Nearest Week to Start Work:</label>
+      <input type="week" id="start-week" name="start-week" /><br /><br />
+      <label for="start-month">Nearest Month to Start Work:</label>
+      <input type="month" id="start-month" name="start-month" /><br /><br />
+      <label for="best-time">Best Time to Work:</label>
+      <input type="time" id="best-time" name="best-time" /><br /><br />
+
+      <label for="Major">majors:</label>
+      <input type="Major" id="Major" name="Major" required />
+
+      <h5>Why You Want to Work with Us</h5>
+      <textarea id="why-work" name="why-work" rows="4" cols="50"></textarea
+      ><br /><br />
+      <input type="submit" value="Send" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
